@@ -1,5 +1,5 @@
 # Code Name: Project Muscle
-My CPTC portfolio project. A web forum/messaging board.
+My CPTC portfolio project. A web forum/message board.
 
 # See the current state of the website
 
