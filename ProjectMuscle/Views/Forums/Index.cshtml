@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ProjectMuscle.Models.Forum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<ul>
+    @{
+        foreach (var item in ((Forum)ViewData["testForum"]).BoardList)
+        {
+            <li>@Html.DisplayFor(modelItem => item.BoardTitle)</li>
+            <li>@Html.DisplayFor(modelItem => item.BoardDescription)</li>
+        }
+
+    }
+</ul>
+<li>@ViewData["testForum"]</li>
+
+
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ForumTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ForumDescription)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ForumTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ForumDescription)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ForumID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ForumID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ForumID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
