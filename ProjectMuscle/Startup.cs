@@ -34,6 +34,10 @@ namespace ProjectMuscle
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            // Adding the Forum DB Context
+            services.AddDbContext<ForumsDatabaseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ForumContext"))); // Gets the con string from appsettings.json
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
